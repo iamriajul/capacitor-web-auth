@@ -18,6 +18,7 @@ public class CapacitorWebAuthPlugin: CAPPlugin, ASWebAuthenticationPresentationC
         print("Redirect",redirectScheme);
         
         guard let requestUrl = URL(string: url) else {
+            call.reject("Invalid URL")
             return
         }
         
