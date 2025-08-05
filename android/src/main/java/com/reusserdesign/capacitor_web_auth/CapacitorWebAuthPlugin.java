@@ -41,9 +41,6 @@ public class CapacitorWebAuthPlugin extends Plugin {
             
             // Launch the browser
             customTabsIntent.launchUrl(getActivity(), Uri.parse(url));
-            
-            // Set up the callback for when the browser returns
-            bridge.setActivityResultCallback(call, "handleOnActivityResult");
         } catch (Exception e) {
             call.reject("Failed to open browser: " + e.getMessage());
         }
